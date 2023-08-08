@@ -43,9 +43,38 @@ nav {
   color: #222222;
   border: 1px solid #222222;
   border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  transition: 0.5s;
 }
 
-ul {
+.btn:hover {
+  border-radius: 0%;
+  width: 6rem;
+  transition: 0.5s;
+}
+
+.fa-x {
+  transform: translateY(0.5rem);
+}
+
+.close {
+  transform: translateY(1.5rem);
+}
+
+.btn:hover .fa-x {
+  transform: translateY(-1.5rem);
+  transition: 0.5s;
+}
+
+.btn:hover .close {
+  transform: translateY(-0.6rem);
+  transition: 0.5s;
+}
+
+.dd-menu-container {
   margin-top: 3rem;
 }
 
@@ -65,10 +94,28 @@ a {
   transition: 0.4s;
 }
 
+.x-icon {
+  cursor: pointer;
+}
+
 a:hover {
   color: #7127ea;
   font-size: 18px;
   transition: 0.3s;
+}
+
+.home-drop-down {
+  display: flex;
+  flex-direction: column;
+}
+
+.dd-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.drop-down-menu {
+  padding-left: 1.5rem;
 }
 
 .x-icon {
