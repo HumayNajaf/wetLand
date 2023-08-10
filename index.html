@@ -16,10 +16,14 @@
         <title>Document</title>
     </head>
     <body>
-        <button class="open-btn">Open</button>
+        <button class="open-btn">
+            <div class="skew-icon skew-1"></div>
+            <div class="skew-icon skew-2"></div>
+            <div class="skew-icon skew-3"></div>
+        </button>
         <nav class="sideBar">
             <div class="nav-btn">
-                <div class="logo"><img src="/logo.png" alt></div>
+                <div class="logo"><a href="#"><img src="/logo.png" alt></a></div>
                 <button class="btn">
                     <i class="fa-solid fa-x"></i>
                     <span class="close">CLOSE</span>
@@ -27,10 +31,7 @@
             </div>
             <ul class="dd-menu-container">
                 <li class="home-drop-down">
-                    <div class="dd-btn">
-                        <a href="#">HOME</a>
-                        <i class="fa-solid fa-plus x-icon"></i>
-                    </div>
+                    <a href="#" class="menu-list">HOME</a>
                     <ul class="drop-down-menu">
                         <li>HOME 1</li>
                         <li>HOME 2</li>
@@ -40,9 +41,35 @@
                     </ul>
                 </li>
                 <li><a href="#">ABOUT</a></li>
-                <li><a href="#">SERVICES</a> <i class="fa-solid fa-plus x-icon"></i></li>
-                <li><a href="#">BLOG</a> <i class="fa-solid fa-plus x-icon"></i></li>
-                <li><a href="#">PAGES</a> <i class="fa-solid fa-plus x-icon"></i></li>
+                <li class="home-drop-down">
+                    <a href="#" class="menu-list">SERVICES</a>
+                    <ul class="drop-down-menu">
+                        <li>HOME 1</li>
+                        <li>HOME 2</li>
+                        <li>HOME 3</li>
+                        <li>HOME 4</li>
+                        <li>HOME 5</li>
+                    </ul></li>
+                <li class="home-drop-down">
+                    <a href="#" class="menu-list">BLOG</a>
+                    <ul class="drop-down-menu">
+                        <li>HOME 1</li>
+                        <li>HOME 2</li>
+                        <li>HOME 3</li>
+                        <li>HOME 4</li>
+                        <li>HOME 5</li>
+                    </ul>
+                </li>
+                <li class="home-drop-down">
+                    <a href="#" class="menu-list">PAGES</a>
+                    <ul class="drop-down-menu">
+                        <li><a href="#"> HOME 1</a></li>
+                        <li><a href="#"> HOME 2</a></li>
+                        <li><a href="#"> HOME 3</a></li>
+                        <li><a href="#"> HOME 4</a></li>
+                        <li><a href="#"> HOME 5</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">CONTACT</a></li>
             </ul>
             <div class="btns">

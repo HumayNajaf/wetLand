@@ -1,3 +1,37 @@
+.open-btn {
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  .skew-icon {
+    width: 1.5rem;
+    height: 0.2rem;
+    background-color: #7127ea;
+  }
+}
+
+.open-btn:hover {
+  .skew-1 {
+    transform: rotate(-40deg);
+    transition: all 0.3s ease-in-out;
+    width: 0.5rem;
+  }
+  .skew-2 {
+    transform: rotate(-35deg);
+    transition: all 0.3s ease-in-out;
+    width: 1rem;
+  }
+  .skew-3 {
+    transform: rotate(-30deg);
+    transition: all 0.3s ease-in-out;
+  }
+}
 
 nav {
   background-color: rgb(255, 255, 255);
@@ -9,103 +43,133 @@ nav {
   top: 0;
   transform: translateX(100%);
   transition: 0.5s ease;
+  .nav-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .btn {
+      width: 3rem;
+      height: 3rem;
+      padding: 0.5rem 1rem;
+      background-color: #fff;
+      color: #222222;
+      border: 1px solid #222222;
+      cursor: pointer;
+      border-radius: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      align-items: center;
+      transition: 0.5s;
+    }
+    .btn:hover {
+      border-radius: 0%;
+      width: 6rem;
+      transition: 0.5s;
+    }
+    .fa-x {
+      transform: translateY(0.5rem);
+    }
+    .close {
+      transform: translateY(1.5rem);
+    }
+    .btn:hover .fa-x {
+      transform: translateY(-1.5rem);
+      transition: 0.5s;
+    }
+    .btn:hover .close {
+      transform: translateY(-0.6rem);
+      transition: 0.5s;
+    }
+  }
 }
 .show {
-    transform: translateX(0%);
+  transform: translateX(0%);
 }
-.nav-btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.btn {
-    width: 3rem;
-    height: 3rem;
-    padding: 0.5rem 1rem;
-    background-color: #fff;
-    color: #222222;
-    border: 1px solid #222222;
-    border-radius: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    align-items: center;
-    transition: 0.5s;
-}
-.btn:hover {
-    border-radius: 0%;
-    width: 6rem;
-    transition: 0.5s;
-}
-.fa-x {
-    transform: translateY(0.5rem);
-}
-.close {
-    transform: translateY(1.5rem);
-}
-.btn:hover .fa-x{
-    transform: translateY(-1.5rem);
-    transition: 0.5s;
-}
-.btn:hover .close {
-    transform: translateY(-0.6rem);
-    transition: 0.5s;
-}
+
 .dd-menu-container {
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
 li {
-    border-bottom: 1px solid #bcbacc;
-    padding: 1rem 0 1rem 0;
-    display: flex;
-    justify-content: space-between;
-}
-li:last-child {
-    border-bottom: none;
-}
-a {
+  border-bottom: 1px solid #bcbacc;
+  padding: 1rem 0 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  a {
     color: #222222;
     transition: 0.4s;
+  }
+  .menu-list:after {
+    content: "+";
+    font-weight: 500;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
+li:last-child {
+  border-bottom: none;
+}
+
 .x-icon {
-    cursor: pointer;
+  cursor: pointer;
 }
 a:hover {
-    color: #7127ea;
-    font-size: 18px;
-    transition: 0.3s;
+  color: #7127ea;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.drop-down-menu li:hover {
+  color: #7127ea;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.drop-down-menu li {
+  cursor: pointer;
 }
 .home-drop-down {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .dd-btn {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .drop-down-menu {
-    padding-left: 1.5rem;
+  padding-left: 1.5rem;
 }
 .x-icon {
-    border-left: 1px solid #bcbacc;
-    padding: 0 1rem;
+  border-left: 1px solid #bcbacc;
+  padding: 0 1rem;
 }
+.drop-down-menu {
+  display: none;
+}
+.open-menu .drop-down-menu {
+  display: inline-block;
+}
+
 .btns {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.7rem;
 }
 .btns button {
-    padding: 0.6rem;
-    border-radius: 0.3rem;
-    border: 2px solid #7127ea;
+  padding: 0.6rem;
+  border-radius: 0.3rem;
+  border: 2px solid #7127ea;
 }
 .btn-login {
-    background-color: #fff;
-    color: #7127ea;
+  background-color: #fff;
+  color: #7127ea;
 }
+// .btn-login:hover {
+
+// }
 .btn-sign-up {
-    background-color: #7127ea;
-    color: #ffffff;
+  background-color: #7127ea;
+  color: #ffffff;
 }
